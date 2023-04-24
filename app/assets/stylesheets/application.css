@@ -21,8 +21,10 @@ text #434b54 */
 .splash {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
   align-items: center;
+  background-color: rgb(243, 243, 243);
+  margin: -8px;
 }
 
 .splash-title {
@@ -42,7 +44,7 @@ text #434b54 */
 }
 
 .splash-button {
-  background-color: white;
+  background-color: rgb(243, 243, 243);
   width: 90vw;
   color: #434b54;
   font-size: 14px;
@@ -55,3 +57,88 @@ text #434b54 */
   background-color: #3778c2;
   color: white;
 }
+
+.signup-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: -8px;
+  font-family: proxima-nova, sans-serif;
+  color: #434b54;
+  background-color: rgb(243, 243, 243);
+}
+
+.signup-header,
+.login-header {
+  background-color: #3778c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.back-arrow {
+  width: 25px;
+  height: auto;
+}
+
+.back-arrow-img {
+  width: 100%;
+  height: auto;
+}
+
+.submit-next,
+.submit-login {
+  background-color: #3778c2;
+  color: white;
+  border: none;
+}
+
+.profile-container {
+  display: flex;
+  background-color: white;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.profile-picture {
+  width: 45px;
+  height: auto;
+}
+
+.profile-container p{
+  margin-left: 8px;
+}
+
+.profile-picture-img {
+  width: 100%;
+  height: auto;
+}
+
+.field {
+  border-top: rgb(243, 243, 243) ;
+  display: flex;
+  padding-left: 15px;
+  background-color: white;
+}
+
+.registration-field,
+.login-field {
+  border: none;
+  flex-grow: 1;
+  border-top: 2px solid rgb(243, 243, 243);
+  padding: 10px;
+}
+.field-name-login {
+  display: flex;
+  background-color: white;
+  margin-top: 15px;
+  padding-left: 15px;
+}
+
+.forgot-dummy {
+  text-align: center;
+}
+

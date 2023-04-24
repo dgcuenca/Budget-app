@@ -1,34 +1,36 @@
-<h2>REGISTER</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "signup-form" }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="signup-header">
+    <div class ="back-arrow">
+      <%= link_to root_path do %>
+      <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "back-arrow-img"%>
+      <% end %>
+    </div>
+    <h2>REGISTER</h2>
+    <%= f.submit "Next", class: "submit-next" %>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "Full name" %>
+  <div class="profile-container">
+    <div class ="profile-picture">
+      <%= image_tag "user_icon.png", alt: "Profile Picture", class: "profile-picture-img"%>
+    </div>
+    <p>Upload picture</p>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name", class: "registration-field"%>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "Email", class: "registration-field"%>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "registration-field"%>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class: "registration-field" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
