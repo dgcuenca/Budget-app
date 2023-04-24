@@ -31,3 +31,4 @@
 /config/master.key
 
 # Igonere created by linters
+node_modules/
