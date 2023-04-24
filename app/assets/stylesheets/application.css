@@ -14,9 +14,44 @@
  *= require_self
  */
 
-.notice-wrapper {
-  align-items: center;
+/* main #3778c2
+second #5fb523
+text #434b54 */
+
+.splash {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  height: 90vh;
+  align-items: center;
+}
+
+.splash-title {
+  font-family: proxima-nova, sans-serif;
+  font-style: bold;
+  font-weight: 100;
+  flex-grow: 1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.splash-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-button {
+  background-color: white;
+  width: 90vw;
+  color: #434b54;
+  font-size: 14px;
+  padding: 11px;
+  border: none;
+  border-radius: 3px;
+}
+
+.splash-button:hover {
+  background-color: #3778c2;
+  color: white;
 }
