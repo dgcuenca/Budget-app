@@ -28,14 +28,13 @@ text #434b54 */
 }
 
 .splash-title {
-  font-family: proxima-nova, sans-serif;
-  font-style: bold;
-  font-weight: 100;
+  font-family: sans-serif;
+  font-style: italic;
   flex-grow: 1;
   margin: 0;
   display: flex;
   align-items: center;
-  font-style: italic;
+  font-weight: bold;
 }
 
 .splash-buttons-container {
@@ -108,7 +107,7 @@ text #434b54 */
   height: auto;
 }
 
-.profile-container p{
+.profile-container p {
   margin-left: 8px;
 }
 
@@ -118,7 +117,7 @@ text #434b54 */
 }
 
 .field {
-  border-top: rgb(243, 243, 243) ;
+  border-top: rgb(243, 243, 243);
   display: flex;
   padding-left: 15px;
   background-color: white;
@@ -131,6 +130,7 @@ text #434b54 */
   border-top: 2px solid rgb(243, 243, 243);
   padding: 10px;
 }
+
 .field-name-login {
   display: flex;
   background-color: white;
@@ -141,4 +141,3 @@ text #434b54 */
 .forgot-dummy {
   text-align: center;
 }
-
