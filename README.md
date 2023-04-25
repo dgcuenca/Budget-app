@@ -165,6 +165,7 @@ Give us a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - [Microverse Team and classmates](https://www.microverse.org/).
+- [Gregoire Vella](https://www.behance.net/gregoirevella).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
