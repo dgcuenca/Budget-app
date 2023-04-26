@@ -59,7 +59,8 @@ text #434b54 */
 
 .signup-form,
 .login-form,
-.categories-container {
+.categories-container,
+.new-category-form {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -71,7 +72,8 @@ text #434b54 */
 
 .signup-header,
 .login-header,
-.categories-header {
+.categories-header,
+.new-category-header {
   background-color: #3778c2;
   color: white;
   display: flex;
@@ -97,7 +99,8 @@ text #434b54 */
 }
 
 .submit-next,
-.submit-login {
+.submit-login,
+.submit-new-category {
   background-color: #3778c2;
   color: white;
   border: none;
@@ -134,7 +137,8 @@ text #434b54 */
   padding: 10px;
 }
 
-.field-name-login {
+.field-name-login,
+.field-name-new-category {
   display: flex;
   background-color: white;
   margin-top: 15px;
@@ -230,4 +234,6 @@ text #434b54 */
   border: 1px solid white;
   background-color: #5fb523;
   color: white;
+  text-decoration: none;
+  text-align: center;
 }
