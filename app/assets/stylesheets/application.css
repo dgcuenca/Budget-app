@@ -215,3 +215,19 @@ text #434b54 */
 .entity-amount {
   color: #434b54;
 }
+
+.new-category-container {
+  display: flex;
+  background-color: #5fb523;
+  justify-content: center;
+  padding: 15px;
+}
+
+.new-category {
+  flex-grow: 1;
+  width: 95vw;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: #5fb523;
+  color: white;
+}
