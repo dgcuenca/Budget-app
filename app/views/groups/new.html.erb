@@ -1,7 +1,7 @@
-<%= form_with model: @entity, url: entitys_path, method: :post, local: true, html: { class: "new-category-form" } do |f|%>
+<%= form_with model: @group, url: groups_path, method: :post, local: true, html: { class: "new-category-form" } do |f|%>
   <div class="new-category-header">
     <div class ="back-arrow">
-      <%= link_to entitys_path do %>
+      <%= link_to groups_path do %>
       <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "back-arrow-img"%>
       <% end %>
     </div>
@@ -9,6 +9,6 @@
     <%= f.submit "Create", class: "submit-new-category" %>
   </div>
    <div class="field-name-new-category">
-    <%= f.text_field :name, autocomplete: "Entity name", placeholder: "Name", class: "login-field"%>
+    <%= f.text_field :name, autocomplete: "Group name", placeholder: "Name", class: "login-field"%>
   </div>
 <%end%>
