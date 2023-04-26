@@ -1,0 +1,41 @@
+<section class="categories-container">
+  <div class="categories-header">
+      <div class ="hamburger">
+        <%= image_tag "hamburger.png", alt: "Hamburger Icon", class: "hamburger-img"%>
+      </div>
+      <h2>TRANSACTIONS</h2>
+      <div class ="search">
+        <%= image_tag "search.png", alt: "Search Icon", class: "search-img"%>
+      </div>
+  </div>
+  <div class="categories-subheader">
+      <div>
+          <p class="left"> Most ancient</p>
+      </div>
+      <div>
+      <p> Most recent</p>
+      </div>
+      <div class="dummy" >Not to show</div>
+  </div>
+  <ul class="entities">
+     <% @entities.each do |entity| %>
+        <li class="entity-container">
+            <div class="entity-icon">
+                <%= image_tag "piggy-bank.png", alt: "Entity Icon", class: "entity-img"%>
+            </div>
+            <div>
+              <h3 class="entity-name">
+                <%= link_to entity.name, entity_path(entity)%>
+              </h3>
+              <p> <%= entity.updated_at.strftime('%d %b %Y')%></p>
+            </div>
+            <div>
+              <p>$ <%= entity.amount%></p>
+            </div>
+        </li>
+    <% end %>
+  </ul>
+  <div>
+    <%= button_to "ADD CATEGORY", new_entity_path,  method: :get, class: "new-category" %>
+  </div>
+</section>

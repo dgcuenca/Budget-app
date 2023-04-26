@@ -12,4 +12,9 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :password, :current_password)
     end
   end
+
+  def after_sign_in_path_for(resource)
+    entitys_path
+  end
+
 end

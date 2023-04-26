@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   root 'splashs#index'
-  resources :entitys, only: [:index, :show]
+  resources :entitys, only: [:index, :show, :new]
 end
