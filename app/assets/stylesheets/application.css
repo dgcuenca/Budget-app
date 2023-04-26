@@ -182,6 +182,7 @@ text #434b54 */
   background-color: white;
   display: flex;
   padding: 12px;
+  gap: 7px
 }
 
 .entity-icon {
@@ -189,4 +190,28 @@ text #434b54 */
   padding: 12px;
   width: 45px;
   height: 45px;
+}
+
+.entity-name-container {
+  flex-grow: 1;
+}
+
+.entity-name-container h3 {
+  margin-top: 12px;
+  margin-bottom: 25px;
+}
+
+.entity-name {
+  text-decoration: none;
+  color: #b7babd;
+}
+
+.entity-updated {
+  margin: 0;
+  font-size: 10px;
+  color: #b7babd;
+}
+
+.entity-amount {
+  color: #434b54;
 }

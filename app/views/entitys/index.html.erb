@@ -23,15 +23,15 @@
             <div class="entity-icon">
                 <%= image_tag "piggy-bank.png", alt: "Entity Icon", class: "entity-img"%>
             </div>
-            <div>
-              <h3 class="entity-name">
-                <%= link_to entity.name, entity_path(entity)%>
+            <div class="entity-name-container">
+              <h3>
+                <%= link_to entity.name, entity_path(entity), { class: "entity-name" } %>
               </h3>
-              <p> <%= entity.updated_at.strftime('%d %b %Y')%></p>
+              <p class="entity-updated">
+                <%= entity.updated_at.strftime('%d %b %Y')%>
+              </p>
             </div>
-            <div>
-              <p>$ <%= entity.amount%></p>
-            </div>
+            <p class="entity-amount">$ <%= entity.amount%></p>
         </li>
     <% end %>
   </ul>
