@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+
     def index
       @groups = current_user.groups
     end
@@ -16,14 +16,13 @@ class GroupsController < ApplicationController
       if @group.save
         redirect_to groups_path
       else
-        puts "Error saving group:"
-        puts @group.errors.full_messages
         render :new
       end
     end
 
     def show
-      
+      @group = Group.find(request.params['id'])
+      @current_user = current_user
     end
 
     private
@@ -31,4 +30,5 @@ class GroupsController < ApplicationController
     def group_params
       params.require(:group).permit(:name, :icon)
     end
+    
 end

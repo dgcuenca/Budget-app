@@ -3,7 +3,7 @@
       <div class ="hamburger">
         <%= image_tag "hamburger.png", alt: "Hamburger Icon", class: "hamburger-img"%>
       </div>
-      <h2>TRANSACTIONS</h2>
+      <h2>CATEGORIES</h2>
       <div class ="search">
         <%= image_tag "search.png", alt: "Search Icon", class: "search-img"%>
       </div>
@@ -31,7 +31,7 @@
                 <%= group.updated_at.strftime('%d %b %Y')%>
               </p>
             </div>
-            <p class="group-amount">$ </p>
+            <p class="group-amount">$<%= group.entitys.sum(:amount) %></p>
         </li>
     <% end %>
   </ul>
