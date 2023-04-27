@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Authentication
 gem 'devise'
+
+# Activate Storage
+gem 'activestorage'

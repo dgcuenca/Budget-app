@@ -21,7 +21,7 @@
      <% @groups.each do |group| %>
         <li class="group-container">
             <div class="group-icon">
-                <%= image_tag "piggy-bank.png", alt: "Group Icon", class: "group-img"%>
+                <%= image_tag group.icon, alt: "Group Icon", class: "group-img"%>
             </div>
             <div class="group-name-container">
               <h3>
