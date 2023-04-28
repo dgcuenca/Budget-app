@@ -79,3 +79,6 @@ gem 'devise'
 
 # Activate Storage
 gem 'activestorage'
+
+# Test 
+gem 'warden'
