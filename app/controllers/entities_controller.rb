@@ -32,5 +32,4 @@ class EntitiesController < ApplicationController
   def entity_params
     params.require(:entity).permit(:name, :amount, category_id: [])
   end
-
 end

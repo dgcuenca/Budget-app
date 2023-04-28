@@ -191,7 +191,7 @@ text #434b54 */
   background-color: white;
   display: flex;
   padding: 12px;
-  gap: 7px
+  gap: 7px;
 }
 
 .group-icon {
@@ -310,9 +310,9 @@ text #434b54 */
 }
 
 .field-name-new-entity {
-    display: flex;
-    background-color: white;
-    flex-direction: column;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
 }
 
 .entity-container {
