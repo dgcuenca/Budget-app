@@ -1,0 +1,27 @@
+<%= form_with model: @entity, url: group_entities_path(@group), method: :post, local: true, html: { class: "new-entity-form" } do |f| %>
+  <div class="new-entity-header">
+    <div class ="back-arrow">
+      <%= link_to group_path(@group) do %>
+        <%= image_tag "back_arrow.png", alt: "Back Arrow", class: "back-arrow-img" %>
+      <% end %>
+    </div>
+    <h2>ADD EXPENSE</h2>
+    <%= f.submit "ADD", class: "submit-new-entity" %>
+  </div>
+  <div class = "new-entity-body">
+    <div class="field-name-new-entity">
+      <%= f.text_field :name, autocomplete: "Entity name", placeholder: "Name", class: "login-field" %>
+    </div>
+    <div class="field-name-new-entity">
+      <%= f.text_field :amount, autocomplete: "Amount", placeholder: "Amount", class: "login-field" %>
+    </div>
+    <div class="field-name-new-entity">
+      <% @groups.each do |group| %>
+        <p>
+          <%= f.check_box :category_id, { multiple: true }, group.id, nil %>
+          <%= group.name %>:
+        </p>
+      <% end %>
+    </div>
+  </div>
+<% end %>

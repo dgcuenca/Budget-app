@@ -1,0 +1,41 @@
+<section class="categories-container">
+  <div class="categories-header">
+      <div class ="hamburger">
+        <%= image_tag "hamburger.png", alt: "Hamburger Icon", class: "hamburger-img"%>
+      </div>
+      <h2>CATEGORIES</h2>
+      <div class ="search">
+        <%= image_tag "search.png", alt: "Search Icon", class: "search-img"%>
+      </div>
+  </div>
+  <div class="categories-subheader">
+      <div>
+          <p class="left"> Most ancient</p>
+      </div>
+      <div>
+      <p> Most recent</p>
+      </div>
+      <div class="dummy" >Not to show</div>
+  </div>
+  <ul class="groups">
+     <% @groups.each do |group| %>
+        <li class="group-container">
+            <div class="group-icon">
+                <%= image_tag group.icon, alt: "Group Icon", class: "group-img"%>
+            </div>
+            <div class="group-name-container">
+              <h3>
+                <%= link_to group.name, group_path(group), { class: "group-name" } %>
+              </h3>
+              <p class="group-updated">
+                <%= group.updated_at.strftime('%d %b %Y')%>
+              </p>
+            </div>
+            <p class="group-amount">$<%= group.entitys.sum(:amount) %></p>
+        </li>
+    <% end %>
+  </ul>
+  <div class="new-category-container">
+    <%= link_to "ADD CATEGORY", new_group_path, class: "new-category" %>
+  </div>
+</section>
