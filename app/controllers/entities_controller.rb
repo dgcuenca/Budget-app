@@ -9,17 +9,15 @@ class EntitiesController < ApplicationController
 
   def create
     @current_user = current_user
-    @entity = Entity.create(name: params[:name], amount: params[:amount])
-    @groups_id = params[:category_id]
-    print '111111111111111111'
-    p @groups_id
-  
-    params[:category_id].each do |category_id|
+    @entity = Entity.new(name: params[:entity][:name], amount: params[:entity][:amount])
+    @entity.user = @current_user
+    @groups_id = params[:entity][:category_id]
+    @groups_id.each do |category_id|
       group = Group.find(category_id)
-      @entity.categories << group
+      @entity.groups << group
     end
     if @entity.save
-      new_group_entity_path(@group)
+      redirect_to group_path(@group)
     else
       render :new
     end
@@ -31,7 +29,7 @@ class EntitiesController < ApplicationController
     @group = current_user.groups.find(params[:group_id])
   end
 
-  def group_params
+  def entity_params
     params.require(:entity).permit(:name, :amount, category_id: [])
   end
 

@@ -23,6 +23,7 @@ class GroupsController < ApplicationController
     def show
       @group = Group.find(request.params['id'])
       @current_user = current_user
+      @entities = current_user.entitys
     end
 
     private
