@@ -19,7 +19,7 @@
       <% @groups.each do |group| %>
         <p>
           <%= f.check_box :category_id, { multiple: true }, group.id, nil %>
-          <%= group.name %>:
+          <%= group.name %>
         </p>
       <% end %>
     </div>
