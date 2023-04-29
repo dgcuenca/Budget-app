@@ -60,7 +60,7 @@ RSpec.describe GroupsController, type: :request do
       expect(response).to render_template(:new)
     end
 
-    it 'should displays the correct page name' do
+    it 'should displays the correct heading' do
       expect(response.body).to include('ADD CATEGORY')
     end
   end
