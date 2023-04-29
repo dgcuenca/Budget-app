@@ -21,7 +21,7 @@ module ActionsHelperEntity
     click_link 'ADD AN EXPENSE'
     fill_in 'entity_name', with: 'FOOD', id: 'entity_name'
     fill_in 'entity_amount', with: '123.4', id: 'entity_amount'
-    check("entity[category_id][]")
+    check('entity[category_id][]')
     click_button 'ADD'
   end
 end

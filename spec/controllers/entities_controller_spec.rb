@@ -7,7 +7,7 @@ RSpec.describe EntitiesController, type: :request do
     @user = User.create!(name: 'Diego', email: 'diego@diego.com', password: '123456')
     login_as(@user, scope: :user)
     @group = Group.create!(name: 'Home',
-      icon: 'piggy-bank.png', user_id: @user.id)
+                           icon: 'piggy-bank.png', user_id: @user.id)
   end
 
   describe 'GET #new' do
@@ -26,6 +26,5 @@ RSpec.describe EntitiesController, type: :request do
     it 'should displays the correct page name' do
       expect(response.body).to include('ADD EXPENSE')
     end
-
   end
 end

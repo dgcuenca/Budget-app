@@ -20,5 +20,4 @@ RSpec.describe Group, type: :system do
     visit groups_path
     expect(page).to have_content('House')
   end
-
 end

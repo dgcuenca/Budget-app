@@ -19,5 +19,4 @@ RSpec.describe Group, type: :system do
     click_link 'ADD AN EXPENSE'
     expect(page).to have_content('ADD EXPENSE')
   end
-
 end

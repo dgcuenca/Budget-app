@@ -68,8 +68,8 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  #test added manually
-  
+  # test added manually
+
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
@@ -84,5 +84,5 @@ gem 'devise'
 # Activate Storage
 gem 'activestorage'
 
-# Test 
+# Test
 gem 'warden'

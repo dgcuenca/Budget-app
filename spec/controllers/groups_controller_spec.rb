@@ -7,7 +7,7 @@ RSpec.describe GroupsController, type: :request do
     @user = User.create!(name: 'Diego', email: 'diego@diego.com', password: '123456')
     login_as(@user, scope: :user)
     @group = Group.create!(name: 'Home',
-      icon: 'piggy-bank.png', user_id: @user.id)
+                           icon: 'piggy-bank.png', user_id: @user.id)
   end
 
   describe 'GET /index' do
@@ -28,7 +28,6 @@ RSpec.describe GroupsController, type: :request do
   end
 
   describe 'GET /show' do
-
     before do
       get group_path(id: @group.id)
     end
@@ -47,9 +46,8 @@ RSpec.describe GroupsController, type: :request do
   end
 
   describe 'GET /new' do
-
     before do
-      get new_group_path      
+      get new_group_path
     end
 
     it 'should returns a successful response' do
@@ -64,5 +62,4 @@ RSpec.describe GroupsController, type: :request do
       expect(response.body).to include('ADD CATEGORY')
     end
   end
-
 end
