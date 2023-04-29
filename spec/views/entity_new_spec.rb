@@ -3,7 +3,7 @@ require_relative 'actions_helper_entity'
 
 RSpec.describe Group, type: :system do
   include ActionsHelperEntity
-  it 'Can see the Group Heding' do
+  it 'Can see the Group Heading' do
     sign_up
     add_group
     add_transaction

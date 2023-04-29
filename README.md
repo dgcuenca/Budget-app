@@ -6,6 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -55,9 +56,23 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Keep tracked of a budget, you can manage your budget by categories]**
+This project is a simple React Capstone. The main features are:
+
+- **The home section displays a list of animes fetched from an API.**
+- **The URL for the detail page is created dinamic.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+<!-- - [Live Demo Link]() -->
+
+Watch it in [action](https://budget-app-oyz5.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 
